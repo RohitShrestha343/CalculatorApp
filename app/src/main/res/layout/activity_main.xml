@@ -11,7 +11,7 @@
 
     <TextView
         android:id="@+id/result"
-        android:layout_width="400dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_gravity="right"
         android:background="#ffffff"
