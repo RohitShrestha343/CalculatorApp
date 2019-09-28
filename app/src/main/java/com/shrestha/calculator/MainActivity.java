@@ -105,11 +105,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 try {
                     String NumberEntered = result.getText().toString();
                     NumberEntered = NumberEntered.substring(0, NumberEntered.length() - 1);
-                    result.setText(NumberEntered);
-                    count = 0;
+                    String word= (NumberEntered);
+                    result.setText("");
+                    result.setText(word);
                     return;
 
                 } catch (Exception e) {
+                    count=0;
                     result.setError("please first enter value");
                 }
                 break;
