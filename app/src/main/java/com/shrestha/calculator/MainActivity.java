@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.butdot:
                 if ((result.getText().toString()).contains(".")) {
+
                 } else {
                     result.append(".");
                 }
@@ -105,13 +106,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 try {
                     String NumberEntered = result.getText().toString();
                     NumberEntered = NumberEntered.substring(0, NumberEntered.length() - 1);
-                    String word= (NumberEntered);
+                    String word = (NumberEntered);
                     result.setText("");
                     result.setText(word);
                     return;
 
                 } catch (Exception e) {
-                    count=0;
+                    count = 0;
                     result.setError("please first enter value");
                 }
                 break;
@@ -154,7 +155,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void SetData(int cou) {
 
-            if(!result.getText().toString().isEmpty()){
+        if (!result.getText().toString().isEmpty()) {
             if (cou == 1) {
                 numbers.setFirstNumber(Double.parseDouble(result.getText().toString()));
                 result.setText("");
@@ -164,10 +165,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             } else {
                 result.setError("only two time");
 
-            }}else {
-                result.setError("please enter the number first");
-                count=0;
             }
+        } else {
+            result.setError("please enter the number first");
+            count = 0;
+        }
 
     }
 }
